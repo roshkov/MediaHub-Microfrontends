@@ -1,6 +1,6 @@
 # MediaHub-Microfrontends
 
-# Current Status: Very beggining of the project
+### Current Status: Very beggining of the project
 
 This project aims at builduing a hub that collects news feed from multiple social media platforms in one place. For the sake of demonstrating, project consists of multiple microfrontends. Each social media component will have its' own microfrontend. On the backend, a microservice architecture will be used.
 
