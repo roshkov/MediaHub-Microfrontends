@@ -54,6 +54,7 @@ Thumbs.db
 *.suo
 *.user
 *.pdb
+*.env
 
 # Logs and databases
 *.log
