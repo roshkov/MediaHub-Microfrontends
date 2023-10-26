@@ -4,9 +4,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/index.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const twitterFeed = ReactDOM.createRoot(
+  document.getElementById("root-twitter")
+);
 
-root.render(
+twitterFeed.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>

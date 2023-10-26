@@ -13,7 +13,6 @@ npm-debug.log
 # Angular
 /dist/
 /node_modules/
-/e2e/
 /.vscode
 /.idea
 .DS_Store

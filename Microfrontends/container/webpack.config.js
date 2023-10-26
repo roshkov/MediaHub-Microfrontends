@@ -1,15 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const path = require("path");
+// const path = require("path");
 
 module.exports = {
-  output: {
-    path: path.join(__dirname, "/dist"), // the bundle output path
-    filename: "bundle.js", // the name of the bundle
-  },
   mode: "development",
   devServer: {
-    port: 1001,
+    port: 1000,
   },
   module: {
     rules: [
@@ -33,14 +29,17 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "twitterFeed",
-      filename: "remoteEntry.js",
-      exposes: {
-        "./TwitterFeedIndex": "./src/index",
+      name: "container",
+      remotes: {
+        twitterFeed: "twitterFeed@http://localhost:1001/remoteEntry.js",
       },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
   ],
+  // output: {
+  //   path: path.join(__dirname, "/dist"), // the bundle output path
+  //   filename: "bundle.js", // the name of the bundle
+  // },
 };
