@@ -5,10 +5,21 @@ import "./styles/App.css";
 
 function App() {
   const { data, loading, error } = useDataFetch();
+
+  const handleTwitterLogin = () => {
+    // Redirect the user to the OAuth server's Twitter authentication route
+    window.location.href = "http://localhost:3100/auth/twitter";
+  };
+
   return (
     <div className="main-container">
       <div className="media-logo-div">
         <img src={logo} className="media-logo" alt="logo" />
+      </div>
+
+      <div>
+        <h1>OAuth with Twitter</h1>
+        <button onClick={handleTwitterLogin}>Sign in with Twitter</button>
       </div>
 
       <div className="content-div">
