@@ -70,13 +70,13 @@ app.get(
 
     // console.log("access token console ", req.user.accessToken);
 
-    // res.redirect(
-    //   `http://localhost:1001/?userData=${encodeURIComponent(userData)}`
-    // );
-
     res.redirect(
-      `http://localhost:1001/oauth-callback?accessToken=${accessToken}&refreshToken=${refreshToken}`
+      `http://localhost:1001/?twitterAccessToken=${accessToken}&twitterRefreshToken=${refreshToken}`
     );
+
+    // res.redirect(
+    //   `http://localhost:1001/oauth-callback?accessToken=${accessToken}&refreshToken=${refreshToken}`
+    // );
 
     // res.end(
     //   `<h1>Authentication succeeded</h1> User access token: <pre>${req.user.accessToken}</pre>`
